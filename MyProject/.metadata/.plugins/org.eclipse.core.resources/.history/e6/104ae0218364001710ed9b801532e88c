@@ -1,0 +1,52 @@
+package com.classmiss.ClassyMissyBackend.dao;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.classmiss.ClassyMissyBackend.model.Cart;
+
+@Repository("cartDAO")
+public class CartDAO {
+	
+	@Autowired
+	SessionFactory sessionFactory;
+	
+	public CartDAO(SessionFactory sessionFactory)
+	{
+		this.sessionFactory=sessionFactory;
+	}
+	@Transactional
+	public void addToCart(Cart cartitem)
+	{
+		sessionFactory.getCurrentSession().save(cartitem);
+	}
+	public List<Cart> getCartItems(String uname)
+	{
+	Session session=sessionFactory.openSession();
+	Query query=session.createQuery("from Cart where uname=:uname and status='N'");
+	query.setParameter("uname", uname);
+	@SuppressWarnings("unchecked")
+	List<Cart> list=query.list();
+	return list;
+	}
+	@Transactional
+	public void deleteCartItem(Cart cart)
+	{
+		sessionFactory.getCurrentSession().delete(cart);
+	}
+	public Cart getCardItem(int citemid)
+	{
+		Session session=sessionFactory.openSession();
+		Cart cart=(Cart)session.get(Cart.class, citemid);
+		return cart;
+	}
+	}
+
+

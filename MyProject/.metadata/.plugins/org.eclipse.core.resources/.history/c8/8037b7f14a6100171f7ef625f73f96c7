@@ -1,0 +1,28 @@
+package com.classmiss.ClassyMissyBackend;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.classmiss.ClassyMissyBackend.dao.CartDAO;
+import com.classmiss.ClassyMissyBackend.model.Cart;
+
+public class CartTestCase {
+public static void main(String[] args) {
+	AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
+	context.scan("com.classmiss.ClassyMissyBackend");
+	context.refresh();
+	
+	CartDAO cartDAO=(CartDAO)context.getBean("cartDAO");
+	
+	Cart cart=new Cart();
+	cart.setCardid(1001);
+	cart.setProdid(3);
+	cart.setProdname("Stone Earring");
+	cart.setPrice(5000);
+	cart.setQuantity(3);
+	cart.setStatus("N");
+	cart.setUname("Susi");
+	
+	cartDAO.addToCart(cart);
+	System.out.println("Added to Cart");
+}
+}
