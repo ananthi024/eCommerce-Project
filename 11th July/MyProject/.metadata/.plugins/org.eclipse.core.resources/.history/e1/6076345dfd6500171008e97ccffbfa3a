@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html"%>
+<%@include file="WEB-INF/views/Header.jsp" %>
+<%@include file="WEB-INF/views/Carousel.jsp" %>
+<h4>Welcome To Classy Missy</h4>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<%@include file="WEB-INF/views/Footer.jsp" %>
+</body>
+</html>
