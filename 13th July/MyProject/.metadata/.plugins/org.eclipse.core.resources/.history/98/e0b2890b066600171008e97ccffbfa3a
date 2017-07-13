@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html"%>
+<html>
+<head>
+<title>Footer</title>
+	
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="<c:url value="/resources/css/Footer.css"/>">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<body>
+<div class="footer-bottom">
+
+  <span class="glyphicon glyphicon-copyright-mark"></span>@2017,ClassyMissy,All Rights Reserved
+
+<div class="text-right right-block">
+                <h4 >CONNECT</h4>
+                <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="https://github.com"><i id="social-gh" class="fa fa-github-square fa-3x social"></i></a>
+	            <div class="footer-bottom">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+				<div class="copyright">
+
+					© 2017, ClassyMissy, All rights reserved
+
+				</div>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+				<div class="design">
+
+					 Web Design & Development by ClassMissy</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+</div>
+   
+</div>
+
+</div>
+
+
+</body>
+</html>
