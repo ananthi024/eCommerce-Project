@@ -12,7 +12,7 @@
 </c:if>
 <table align="center" cellspacing="2">
 	<tr>
-		<td colspan="2">Category Details</td>
+		<td colspan="2"><center>Category Details</center></td>
 		<c:if test="${flag}">
 		<input type="hidden" name="catid" value="${category.catid}"/>
 		</c:if>
@@ -20,10 +20,10 @@
 	<tr>
 	<td>Category Name</td>
 	<c:if test="${flag}">
-	<td><input type="text" name="catname" value="${category.catname }"/></td>
+	<td><input type="text" name="catname" value="${category.catname }"required /></td>
 	</c:if>
 	<c:if test="${!flag}">
-	<td><input type="text" name="catname"/></td>
+	<td><input type="text" name="catname" required/></td>
 	</c:if>
 	</tr>
 	<tr>
@@ -70,6 +70,6 @@
 </c:forEach>
 </table>
 <!--Completed Displaying Table--->
-
+<%@include file="Footer.jsp" %>
 </body>
 </html>

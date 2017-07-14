@@ -9,6 +9,6 @@
 <body>
 <form action="perform_logout" methoed="POST" />
 
-<a href="Header" type="submit">Logout</a>
+<a href="index" type="submit">Logout</a>
 </body>
 </html>

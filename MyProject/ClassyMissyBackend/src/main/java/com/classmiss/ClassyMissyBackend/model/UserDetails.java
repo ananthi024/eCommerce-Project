@@ -11,6 +11,7 @@ public class UserDetails {
 	@Id
 @GeneratedValue
 	int id;
+	
 String username;
 String password;
 String cusname;

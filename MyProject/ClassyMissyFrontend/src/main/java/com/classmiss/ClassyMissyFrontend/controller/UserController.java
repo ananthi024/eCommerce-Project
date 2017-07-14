@@ -83,7 +83,7 @@ public String insertUserDetails(@ModelAttribute("userDetails") UserDetails userD
 	System.out.println("---User Inserted---");
 	return "Login";
 }
-@RequestMapping(value="/perform_logout",method=RequestMethod.GET)
+@RequestMapping(value="/logout_success")
 public String logoutSuccess(HttpSession session)
 {
 	session.invalidate();

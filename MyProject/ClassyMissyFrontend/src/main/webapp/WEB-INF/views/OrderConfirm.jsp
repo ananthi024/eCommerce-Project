@@ -1,17 +1,18 @@
 <%@ page language="java" contentType="text/html"%>
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="Header.jsp" %>
-<table cellspacing="3" align="center" >
-<tr>
-<td colspan="5"><center><h3>Shopping Cart</h3></center></td>
-</tr>
+<table class="table table-bordered" colspan="5"><center><h3>Shopping Cart</h3></center>
+  <thead>
+    <tr>
 <tr bgcolor="gray">
-<td>Product Name</td>
-<td>Quantity</td>
-<td>SubTotal</td>
-<td>Image</td>
-</tr>
-
+<th>Product Name</th>
+<th>Quantity</th>
+<th>SubTotal</th>
+<th>Image</th>
+</tr></tr>
+</thead>
+<tbody>
+    <tr>
 <c:forEach items="${cartitems }" var="cartitem">
 <tr>
 <td>${cartitem.prodname }</td>
@@ -24,15 +25,23 @@
 <td colspan="3">Grant Total</td>
 <td>${grandtotal }</td>
 </tr>
-</table>
 </c:forEach>
+</tr>
+</tbody>
+</table>
 
+<!-------------------------------------------------------Payment Information------------------------------->
 
-<table cellspacing="3" cellpadding="2" align="center">
+<table class="table table-inverse" cellspacing="3" cellpadding="2" align="center">
+  <thead>
+    <tr>
+
 <tr bgcolor="gray">
 <td colspan="2">Payment Information</td>
 </tr>
-
+</thead>
+<tbody>
+    
 <tr>
 <td>Payment Mode</td>
 <td>
@@ -44,8 +53,9 @@
 <tr bgcolor="gray">
 <td colspan="2"><input type="submit" value="pay" /></td>
 </tr>
-
+</tbody>
 
 </table>
+<%@include file="Footer.jsp" %>
 </body>
 </html>

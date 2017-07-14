@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-<title>Navbar Example</title>
+<title>ClassyMissy</title>
 	
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
 <div class="navbar-header">
 <a class="navbar-brand" rel="home" href="#" title="The Exprssion of Pearl">
                 <img style="max-width:50px; margin-top: -7px;"
-                     src="cma2.jpg">
+                     src="D:\cma2.jpg">
             </a>
 <a class="navbar-brand" href="Home.jsp"></a>
 </div>
@@ -27,50 +27,44 @@
 <c:if test="${sessionScope.loggedIn }">
 
 <ul class="nav navbar-nav">
+<li>ClassMissy</li>
 <li class="active"><a href="AdminHome"><span class="glyphicon glyphicon-home"></span>Home</a></li>
 <li><a href="Category">Manage Category</a></li>
-<li><a href="displayProduct">Manage Products</a>
+<li><a href="Product">Manage Products</a>
 <li><a href="Supplier">Manage Supplier</a></li>
+
 <div class="nav navbar-nav navbar-right">
+<li><a href="#">${sessionScope.username}</a></li>
 <li><a href="Header">Logout</a></li>
-</div>
- 
- <div class="nav navbar-nav navbar-right">
-  <a href="#">${sessionScope.username}</a>
+
   
+  </div>
  
  </ul>
  </div>
  </c:if>
   </div>
-
+<div>
 <c:if test="${!sessionScope.loggedIn }">
 
 <ul class="nav navbar-nav">
+
 <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span>Home</a></li>
 <li><a href="AboutUs">AboutUs</a></li>
-<li><a href="displayProduct">Products</a>
+<li><a href="displayProduct">Products</a></li>
 <li><a href="ContactUs">ContactUs</a></li>
- <li class="dropdown"><a href="#" class="dropdown-toggle" 
- data-toggle="dropdown" role="button" aria-haspopup="true" 
- aria-expanded="false">Categories <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Earing</a></li>
-            <li><a href="#">Bracelet</a></li>
-            <li><a href="#">Ring</a></li>
-          </ul></li>    
+     
             
 <div class="nav navbar-nav navbar-right">
 <li><a href="login"><span class="glyphicon glyphicon-share"></span>SignIn </a></li>
 <li><a href="Register"><span class="glyphicon glyphicon-user"></span>SignUp </a></li>
-
- 
-      
-      
 </div>
+
 </ul>
 </c:if>
 </div>
+</div>
+
 </nav>
 </form>
 </body>

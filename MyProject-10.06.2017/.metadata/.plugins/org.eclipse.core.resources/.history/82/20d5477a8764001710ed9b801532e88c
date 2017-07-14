@@ -1,0 +1,15 @@
+package com.classmiss.ClassyMissyFrontend.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.classmiss.ClassyMissyBackend.dao.CartDAO;
+
+@Controller
+public class OrderController {
+	@Autowired
+	CartDAO cartDAO;
+	
+	@auto
+
+}

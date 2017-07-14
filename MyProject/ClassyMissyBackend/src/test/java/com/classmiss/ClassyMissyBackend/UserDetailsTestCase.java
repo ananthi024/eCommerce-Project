@@ -20,7 +20,7 @@ public class UserDetailsTestCase {
 		//Insertion TestCase
 		
 		UserDetails userDetails=new UserDetails();
-		userDetails.setUsername("Abi");
+		userDetails.setUsername("abi");
 		userDetails.setCusname("Abinaya");
 		
 		userDetails.setPassword("12345");

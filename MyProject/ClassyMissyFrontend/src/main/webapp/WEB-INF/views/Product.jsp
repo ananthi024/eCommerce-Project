@@ -28,19 +28,24 @@
 			</tr>		
 	<tr>
 		<td>Supplier</td>
-	<td><form:input path="supid"/></td>
+		<td><form:input path="supid" /></td>
+	<!--  <td><form:select path="supid">
+						<form:option value="0" label="------Select----" />
+						<form:options items="${suplist}" />
+					</form:select>
+				</td>-->
 	</tr>
 	<tr>
 	<td>Price</td>
-	<td><form:input path="price"/></td>
+	<td><form:input path="price" /></td>
 	</tr>
 	<tr>
 	<td>Stock</td>
-	<td><form:input path="quantity"/></td>
+	<td><form:input path="quantity" /></td>
 	</tr>
 	<tr>
 	<td>Product Desc</td>
-	<td><form:textarea path="proddesc"/></td>
+	<td><form:textarea path="proddesc" /></td>
 	</tr>
 	<tr>
 	<td><input type="submit" /></td>
@@ -84,7 +89,7 @@
 </c:forEach>
 </table>
 <!--Completed Displaying Table--->
-
+<%@include file="Footer.jsp" %>
 </body>
 </html>
 

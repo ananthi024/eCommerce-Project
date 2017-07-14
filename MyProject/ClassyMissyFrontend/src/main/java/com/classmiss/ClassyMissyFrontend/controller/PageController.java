@@ -26,11 +26,17 @@ public String ShowLogin()
 {
 	return "Login";
 }
-@RequestMapping("/perform_logout")
+@RequestMapping("/logout")
 public String ShowLogout()
 {
 	return "index";
 }
+@RequestMapping("/loginfail")
+public String ShowLoginFail()
+{
+	return "LoginFail";
+}
+
 }
 
 

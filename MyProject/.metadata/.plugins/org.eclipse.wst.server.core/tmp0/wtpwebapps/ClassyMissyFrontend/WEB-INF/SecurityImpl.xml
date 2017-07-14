@@ -21,7 +21,7 @@
 			
 
 <security:form-login login-page="/login" default-target-url="/" 
-login-processing-url="/perform_login" authentication-failure-url="/login" 
+login-processing-url="/perform_login" authentication-failure-url="/loginfail" 
 authentication-success-forward-url="/login_success" />
 
 <security:logout logout-url="/perform_logout" invalidate-session="true" logout-success-url="/logout_success" />

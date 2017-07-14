@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html"%>
+<%@include file="WEB-INF/views/Header.jsp" %>
+<%@include file="WEB-INF/views/Carousel.jsp" %>
+<h4><center>Welcome To Classy Missy</center></h4>
+
+<%@include file="WEB-INF/views/Thumbnail.jsp" %>
+<%@include file="WEB-INF/views/Footer.jsp" %>
+</body>
+</html>

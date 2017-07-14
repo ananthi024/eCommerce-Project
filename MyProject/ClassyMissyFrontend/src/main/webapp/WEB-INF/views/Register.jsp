@@ -38,8 +38,8 @@
 							<label for="cusname" class="cols-sm-2 control-label">Your Name</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="cusname" id="cusname" title=" placeholder="cusname"  required/>
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="cusname" id="Your name" pattern="[A-Z][A-za-z\s]{3,20}" title="First letter should be Capital,Followed by small Letter,Name Should be minimum 3 letter & maximum 20 letter"  required/>
 								</div>
 							</div>
 						</div>	
@@ -48,7 +48,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Username" pattern=".{3,10}" title="minimum length for username is 3" required/>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Username" pattern="[a-z]{3,10}[1-9]{1-3}" minlength="4" maxlength="10" title="username should be lowercase letter min 4 to max 10 ,no white space or symbols,Numbers 1 to 3" required/>
 								</div>
 							</div>
 						</div>	
@@ -58,7 +58,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="email" oninput="check(this)" 	required />
+									<input type="text" class="form-control" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="eg:abcd@gmail.com"  placeholder="email" oninput="check(this)" required />
 									
 								</div>
 							</div>
@@ -71,21 +71,32 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Password" required/>
+									<input type="password" class="form-control" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" required/>
 								</div>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+						
+						
+                    <div class="form-group">
+							<label for="mobileno" class="cols-sm-2 control-label">Mobile Number</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password" required/>
+									<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="mobileno" id="mobileno"  placeholder="Mobile Number" length="10" title="Compulsary 10 digits,starts only with(7,8,9)"
+						id="mobile" onkeyup="validatephone(this);"pattern="[7-9]{1}[0-9]{9}" required/>
 								</div>
 							</div>
 						</div>
-                      
+                      <div class="form-group">
+							<label for="address" class="cols-sm-2 control-label">Address</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-address-card fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="address" id="address"  placeholder="Address"  required/>
+								</div>
+							</div>
+						</div>
 											
 									</div>
 							</div>
@@ -106,6 +117,29 @@
 		</div>
 		</div>
 		</div></div>
+		
+		<script type="text/javascript">
+function email_validate(email) {
+			var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+			if (regMail.test(email) == false) {
+				document.getElementById("status").innerHTML = "<span class='warning'>Email address is not valid yet.</span>";
+			} else {
+				document.getElementById("status").innerHTML = "<span class='valid'>Thanks, you have entered a valid Email address!</span>";
+			}
+		}
+function validatephone(mobile) {
+	
+	    var pass1 = document.getElementById('mobile');
+	    var message = document.getElementById('message');
+	  
+	    if(phone.value.length!=10){
+	        
+	        message.innerHTML = "required 10 digits, match requested format!"
+	    }else{
+	    	message.innerHTML="phone number is valid"
+	    }
+	    }
+	</script>
 		<%@include file="Footer.jsp" %>
 		
 

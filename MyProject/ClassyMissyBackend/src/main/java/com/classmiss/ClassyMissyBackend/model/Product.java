@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,9 +20,10 @@ public class Product {
 	@GeneratedValue
 	int prodid;
 	
-	/*@NotEmpty(message="Please Enter the Productname")
-	@Size(min=4, max=15, message="Your Product Name must be Entered")*/
+	@NotNull(message="Please Enter the Productname")
+	@Size(min=4, max=15, message="Your Product Name must be 4 to 15")
 	String prodname;
+	
 	String proddesc;
 	int catid,supid,price,quantity;
 	

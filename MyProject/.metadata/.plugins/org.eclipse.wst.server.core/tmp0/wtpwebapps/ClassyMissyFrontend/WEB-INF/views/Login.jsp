@@ -28,7 +28,7 @@
                                   <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
                                   <span class="help-block"></span>
                               </div>
-                              <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
+                              <div class="alert alert-error hide">Wrong username or password</div>
                               <div class="checkbox">
                                   <label>
                                       <input type="checkbox" name="remember" id="remember"> Remember login
@@ -36,7 +36,11 @@
                                   
                               </div>
                               <button  type="submit" class="btn btn-success btn-block">Login</button>
-                              
+                              <div class="panel-footer ">
+						New User? <a href="Register" onClick=""> Sign Up Here </a>
+						</br>
+						
+					</div>
                           </form>
                       </div>
                   </div>

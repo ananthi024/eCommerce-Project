@@ -15,12 +15,12 @@
 			</tr>
 			<tr>
 				<td>Supplier Name</td>
-				<td><form:input path="supname" /></td>
+				<td><form:input path="supname"/></td>
 			</tr>
 						
 			<tr>
 				<td>Supplier Address</td>
-				<td><form:input path="supaddr" /></td>
+				<td><form:input path="supaddr"  /></td>
 			</tr>
 				
 			<tr>
@@ -32,14 +32,14 @@
 <!-- Displaying the Supplier data using Table -->
 <table cellspacing="2" align="center" border="1">
 
-	<tr bgcolor="pink">
+	<tr bgcolor="gray">
 		<td>Supplier ID</td>
 		<td>Supplier Name</td>
 		<td>Supplier Address</td>
 		<td>Operation</td>
 	</tr>
 	<c:forEach items="${suplist}" var="supplier">
-		<tr bgcolor="cyan">
+		<tr bgcolor="pink">
 			<td>${supplier.supid}</td>
 			<td>${supplier.supname}</td>
 			<td>${supplier.supaddr}</td>
@@ -50,6 +50,6 @@
 	</c:forEach>
 </table>
 <!-- Completed Displaying Table -->
-
+<%@include file="Footer.jsp" %>
 </body>
 </html>
