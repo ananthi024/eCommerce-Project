@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="UserHeader.jsp" %>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+   
+<body>
+
+<div class="span9" >
+<center><img alt="" src="http://timesofoman.com/uploads/images/2015/08/13/182211.jpg"  ></center>
+	 
+					<center><h4>Thank you for Shopping</h4></center>
+					<center><h3>Your order has been Booking Successfully.</h3></center>
+
+                    <center><p>Your order will be shipped with in Three Working Days!!!!!!!</p>
+                    
+                    <center><p>Visit Again....</p></center>
+                <div class="span5">
+            <tr bgcolor="pink">
+<td colspan="2"><center><a href="OrderCompletion"><input type="submit" value="Contiune Shopping " /></center></td>
+</tr>
+			</div>	
+			
+			<br>
+			
+			<%@include file="Footer.jsp" %>
+</body>
+</html>

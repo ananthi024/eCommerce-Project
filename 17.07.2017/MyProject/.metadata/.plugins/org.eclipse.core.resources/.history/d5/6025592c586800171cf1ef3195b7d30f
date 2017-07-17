@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="Header.jsp" %>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+   
+<body>
+
+<div class="span9" >
+	 
+					<h2>Thank you for Shopping</h2>
+					<h3>Your order has been Booking Successfully.</h3>
+
+                    <p>Your order will be shipped with in Three Working Days!!!!!!!</p>
+                <div class="span5">
+            
+			</div>	
+			
+			<br>
+			
+			<%@include file="Footer.jsp" %>
+</body>
+</html>
