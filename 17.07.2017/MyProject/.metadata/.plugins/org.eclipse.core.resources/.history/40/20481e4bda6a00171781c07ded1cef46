@@ -1,0 +1,51 @@
+package com.classmiss.ClassyMissyBackend.dao;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.classmiss.ClassyMissyBackend.model.OrderDetail;
+
+@Repository("orderDetailDAO")
+public class OrderDetailDAO {
+@Autowired
+SessionFactory sessionFactory;
+public OrderDetailDAO(SessionFactory sessionFactory)
+{
+	this.sessionFactory=sessionFactory;
+}
+@Transactional
+public void insertOrder(OrderDetail order)
+{
+	sessionFactory.getCurrentSession().saveOrUpdate(order);
+	
+}
+public List<OrderDetail> retrieveOrders(String username)
+{
+	Query q=sessionFactory.getCurrentSession().createQuery("from OrderDetail where username=:uname");
+	q.setParameter("uname", username);
+	List<OrderDetail> list=q.list();
+	return list;
+}
+public OrderDetail getOrderDetail()
+{
+	Session session=sessionFactory.openSession();
+	Query q=session.createQuery("from OrderDetail order by id ");
+	List<OrderDetail> list=q.list();
+	session.close();
+	if(list.size()>0)
+	{
+		return list.get(0);
+	}
+		else
+		{
+			return list.get(1);
+	}
+}
+}
