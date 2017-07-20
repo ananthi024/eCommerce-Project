@@ -1,0 +1,46 @@
+package com.classmiss.ClassyMissyFrontend.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class PageController {
+@RequestMapping("/AboutUs")
+public String ShowAboutUs()
+{
+	return "AboutUs";
+	
+}
+@RequestMapping("/ContactUs")
+public String ShowContactUs()
+{
+	return "ContactUs";
+}
+@RequestMapping("/Register")
+public String ShowRegister()
+{
+	return "Register";
+}
+@RequestMapping("/login")
+public String ShowLogin()
+{
+	return "Login";
+}
+@RequestMapping("/logout")
+public String ShowLogout()
+{
+	return "index";
+}
+@RequestMapping("/loginfail")
+public String ShowLoginFail()
+{
+	return "LoginFail";
+}
+@RequestMapping("/Email")
+public String ShowMail()
+{
+	return "Email";
+}
+}
+
+
